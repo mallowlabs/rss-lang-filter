@@ -1,5 +1,5 @@
 import { Hono } from 'hono'
-import { DOMParser, XMLSerializer } from 'xmldom';
+import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 
 const app = new Hono()
 
