@@ -7,8 +7,6 @@ const app = new Hono();
 const serializer = new XMLSerializer();
 const deserializer = new DOMParser();
 
-const FEED_URL = 'https://dev.classmethod.jp/feed/';
-
 const filterFeed = (text: string, language: string) => {
   const doc = deserializer.parseFromString(text, 'text/xml');
   const channel = doc.getElementsByTagName('channel')[0];
@@ -30,9 +28,16 @@ app.get('/', (c) => {
 });
 
 app.get('/feed', async (c) => {
-  const response = await fetch(FEED_URL);
+  const lang = c.req.query('lang') || 'ja';
+  const url = c.req.query('url');
+  if (!url) {
+    c.status(400);
+    return c.text('Please specify the feed URL');
+  }
+
+  const response = await fetch(url);
   const data = await response.text();
-  const text = filterFeed(data, 'ja');
+  const text = filterFeed(data, lang);
   return c.text(text);
 });
 

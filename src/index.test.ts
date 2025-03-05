@@ -35,10 +35,19 @@ describe('Test the application', () => {
   });
 
   it('Should return filtered feed', async () => {
-    const res = await app.request('http://localhost/feed');
+    const res = await app.request(
+      'http://localhost/feed?url=https%3A%2F%2Fblog.example.com%2F',
+    );
     const text = await res.text();
     expect(res.status).toBe(200);
     expect(text).toContain('タイトル1');
     expect(text).not.toContain('안녕하세요2');
+  });
+
+  it('Should return 400 response', async () => {
+    const res = await app.request('http://localhost/feed');
+    const text = await res.text();
+    expect(res.status).toBe(400);
+    expect(text).toBe('Please specify the feed URL');
   });
 });
