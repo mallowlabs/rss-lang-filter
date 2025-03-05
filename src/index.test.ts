@@ -18,11 +18,11 @@ describe('Test the application', () => {
           <description>안녕하세요2</description>
         </item>
       </channel>
-    </rss>`
+    </rss>`;
 
-    vi
-      .spyOn(globalThis, 'fetch')
-      .mockImplementation(async () => new Response(mockedFeed, { status: 200 }));
+    vi.spyOn(globalThis, 'fetch').mockImplementation(
+      async () => new Response(mockedFeed, { status: 200 }),
+    );
   });
 
   afterEach(() => {
@@ -30,15 +30,15 @@ describe('Test the application', () => {
   });
 
   it('Should return 200 response', async () => {
-    const res = await app.request('http://localhost/')
-    expect(res.status).toBe(200)
-  })
+    const res = await app.request('http://localhost/');
+    expect(res.status).toBe(200);
+  });
 
   it('Should return filtered feed', async () => {
-    const res = await app.request('http://localhost/feed')
-    const text = await res.text()
-    expect(res.status).toBe(200)
-    expect(text).toContain('タイトル1')
-    expect(text).not.toContain('안녕하세요2')
-  })
-})
+    const res = await app.request('http://localhost/feed');
+    const text = await res.text();
+    expect(res.status).toBe(200);
+    expect(text).toContain('タイトル1');
+    expect(text).not.toContain('안녕하세요2');
+  });
+});
