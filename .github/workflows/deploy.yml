@@ -29,5 +29,5 @@ jobs:
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: deploy --minify
