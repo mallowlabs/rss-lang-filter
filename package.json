@@ -10,7 +10,7 @@
   "dependencies": {
     "@xmldom/xmldom": "^0.9.8",
     "efficient-language-detector-no-dynamic-import": "^1.0.3",
-    "hono": "^4.7.9"
+    "hono": "^4.7.10"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
