@@ -13,7 +13,7 @@
     "hono": "^4.7.11"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.0.2",
+    "@biomejs/biome": "^2.0.4",
     "@cloudflare/workers-types": "^4.20250619.0",
     "@types/xmldom": "^0.1.34",
     "vitest": "^3.2.3",
