@@ -17,6 +17,6 @@
     "@cloudflare/workers-types": "^4.20260129.0",
     "@types/xmldom": "^0.1.34",
     "vitest": "^4.0.17",
-    "wrangler": "^4.60.0"
+    "wrangler": "^4.61.1"
   }
 }
