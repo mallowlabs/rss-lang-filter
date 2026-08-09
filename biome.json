@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**"]
+    "includes": ["**", "!src/eld/ngrams-m60.ts"]
   },
   "formatter": {
     "enabled": true,

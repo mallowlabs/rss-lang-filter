@@ -1,6 +1,6 @@
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
-import { eld } from 'efficient-language-detector-no-dynamic-import';
 import { Hono } from 'hono';
+import { eld } from './eld';
 
 const app = new Hono();
 
