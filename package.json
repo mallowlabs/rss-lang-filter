@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@xmldom/xmldom": "^0.9.10",
-    "hono": "^4.13.0"
+    "hono": "^4.13.2"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.8",
