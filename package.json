@@ -18,6 +18,6 @@
     "@types/xmldom": "^0.1.34",
     "efficient-language-detector-no-dynamic-import": "^1.0.3",
     "vitest": "^4.1.11",
-    "wrangler": "^4.125.0"
+    "wrangler": "^4.126.0"
   }
 }
