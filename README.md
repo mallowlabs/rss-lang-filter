@@ -16,7 +16,6 @@ npm run dev
 ## Usage
 
 The service provides an API endpoint (`/feed`) that accepts two parameters:
-
 - `url`: The URL of the RSS feed you want to filter (required) - **must be URL encoded**
 - `lang`: The language code you want to keep (default: 'ja' - Japanese)
 
